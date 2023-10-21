@@ -1,0 +1,4 @@
+name: LunarisMC-Plugin
+version: '${project.version}'
+main: dev.kippenboutske.lunarismcplugin
+api-version: '1.20'

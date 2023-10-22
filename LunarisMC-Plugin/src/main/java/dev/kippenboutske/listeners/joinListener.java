@@ -19,7 +19,7 @@ public class joinListener implements Listener {
         e.getPlayer().sendMessage("Hello " + e.getPlayer().getDisplayName() + "! Welcome in LunarisMC !");
         e.getPlayer().sendMessage("Your current ping is: " + e.getPlayer().getPing() + "MS!");
         e.setJoinMessage(ChatColor.GRAY + "[ų] " + e.getPlayer().getDisplayName());
-        final Component header = (Component) net.kyori.adventure.text.Component.text("\n Welcome in \n <bold>LunarisMC</bold>", NamedTextColor.BLUE);
+        final Component header = (Component) net.kyori.adventure.text.Component.text("\n Welcome in \n <b>LunarisMC</b>", NamedTextColor.BLUE);
         final Component footer = (Component) net.kyori.adventure.text.Component.text("Have a great time!" + "\n" + "Cheese");
         e.getPlayer().sendPlayerListHeaderAndFooter( header, footer);
 

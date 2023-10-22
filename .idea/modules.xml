@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/LunarisMC.iml" filepath="$PROJECT_DIR$/.idea/LunarisMC.iml" />
-      <module fileurl="file://$PROJECT_DIR$/LunarisMC-Plugin/LunarisMC-Plugin.iml" filepath="$PROJECT_DIR$/LunarisMC-Plugin/LunarisMC-Plugin.iml" />
     </modules>
   </component>
 </project>

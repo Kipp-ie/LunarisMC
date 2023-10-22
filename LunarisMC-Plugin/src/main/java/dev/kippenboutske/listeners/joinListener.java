@@ -13,7 +13,7 @@ import java.awt.*;
 public class joinListener implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
-        final Component name = net.kyori.adventure.text.Component.text("Awesome BossBar");
+        final Component name = net.kyori.adventure.text.Component.text("BossBar");
         final BossBar bossbar = BossBar.bossBar( name, 1, BossBar.Color.BLUE, BossBar.Overlay.NOTCHED_20);
         e.getPlayer().showBossBar(bossbar);
         e.getPlayer().sendMessage("Hello " + e.getPlayer().getDisplayName() + "! Welcome in LunarisMC !");

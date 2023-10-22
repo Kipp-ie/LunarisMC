@@ -14,6 +14,7 @@ public final class lunarismcplugin extends JavaPlugin {
         Bukkit.getLogger().info("██║░░░░░██║░░░██║██║╚████║██╔══██║██╔══██╗██║░╚═══██╗██║╚██╔╝██║██║░░██╗");
         Bukkit.getLogger().info("███████╗╚██████╔╝██║░╚███║██║░░██║██║░░██║██║██████╔╝██║░╚═╝░██║╚█████╔╝");
         Bukkit.getLogger().info("╚══════╝░╚═════╝░╚═╝░░╚══╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝╚═════╝░╚═╝░░░░░╚═╝░╚════╝░");
+        Bukkit.getPluginManager().registerEvents(new joinListener(), this);
     }
 
     @Override

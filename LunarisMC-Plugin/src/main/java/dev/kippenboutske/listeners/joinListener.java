@@ -1,8 +1,10 @@
 package dev.kippenboutske.listeners;
 
+import net.kyori.adventure.audience.Audience;
 import net.kyori.adventure.bossbar.BossBar;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
+import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -13,14 +15,16 @@ import java.awt.*;
 public class joinListener implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
-        final Component name = net.kyori.adventure.text.Component.text("Welcome in <bold>LunarisMC</bold>");
+        Audience player = e.getPlayer();
+        MiniMessage mm = MiniMessage.miniMessage();
+        final Component name = mm.deserialize("<blue>Welcome in <bold>testing</bold></blue>");
         final BossBar bossbar = BossBar.bossBar( name, 1, BossBar.Color.BLUE, BossBar.Overlay.NOTCHED_20);
         e.getPlayer().showBossBar(bossbar);
         e.getPlayer().sendMessage("Hello " + e.getPlayer().getDisplayName() + "! Welcome in LunarisMC !");
         e.getPlayer().sendMessage("Your current ping is: " + e.getPlayer().getPing() + "MS!");
         e.setJoinMessage(ChatColor.GRAY + "[ų] " + e.getPlayer().getDisplayName());
-        final Component header = (Component) net.kyori.adventure.text.Component.text("\n Welcome in \n <b>LunarisMC</b>", NamedTextColor.BLUE);
-        final Component footer = (Component) net.kyori.adventure.text.Component.text("Have a great time!" + "\n" + "Cheese");
+        final Component header = mm.deserialize("<blue>\n Welcome in \n </blue>" + "<bold>testing</bold>");
+        final Component footer = mm.deserialize("<blue>Have a great time!</blue>" + "\n" + "<aqua>Cheese</aqua>");
         e.getPlayer().sendPlayerListHeaderAndFooter( header, footer);
 
     }
